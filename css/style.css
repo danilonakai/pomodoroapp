@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #ececec;
+    font-family: arial;
+}
+
+/* HEADER */
+header{
+    width:100%;
+    background-color: #252525;
+}
+header .header-btn i{vertical-align:middle;}
+header .container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+header .container h1{
+    color:#fff;
+}
+
+/* POMODORO */
+#pomodoro{
+    width: 500px;
+    height: 300px;
+    border: 1px solid #252525;
+    margin: 40px auto 0 auto;
+    padding: 48px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#pomodoro h3{
+    margin-bottom: 25px;
+}
+#pomodoro .timer{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+#pomodoro .menu{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+#pomodoro .menu span{
+    cursor:pointer;
+    padding:6px;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+#pomodoro .menu .active{
+    background-color:#81c781;
+    color:#252525;
+}
+#pomodoro #pomodoro-btn{
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    outline:none;
+}
+#pomodoro .start-btn{
+    background-color:#81c781;
+    border:1px solid #81c781;
+    color:#252525;
+}
+#pomodoro .stop-btn{
+    background-color:#d48383;
+    border:1px solid #d48383;
+}
+
+/* TASKS */
+.tasks{
+    width: 500px;
+    border: 1px solid #252525;
+    padding: 20px;
+    margin: 20px auto 0 auto;
+    box-sizing: border-box;
+}
+.tasks h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.tasks #open-create-modal{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+.tasks #open-create-modal:hover{
+    background-color: #252525;
+    color:#fff;
+}
+.tasks .task-list{
+    list-style: none;
+    padding: 0;
+}
+.tasks .task-list li{
+    border:1px solid #252525;
+    border-radius:5px;
+    padding: 10px;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+.tasks .task-list .active{
+    background-color: #252525;
+    color:#fff;
+}
+.tasks .task-list li:last-child{
+    margin-bottom:0;
+}
+.tasks .task-list li .task-complete{
+    font-size: 22px;
+    margin-top: 2px;
+    color: #737373;
+}
+.tasks .task-list li #task-completed{
+    color:#81c781;
+}
+.tasks .task-list li h4{
+    min-width:50%;
+    margin-top:5px;
+}
+.tasks .task-list li .completed{
+    text-decoration: line-through;
+}
+.tasks .task-list li span{
+    margin-top:5px;
+}
+.tasks .task-list li .task-config{
+    background-color: #737373;
+    color:#d4d1d1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/* MODAL */
+.modal-grid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.modal-grid .modal-bg{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: rgba(4,4,4,0.7);
+}
+.modal-grid .modal{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -250px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 30px;
+    z-index: 99;
+}
+.modal-grid .modal h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.modal-grid .modal ul{
+    list-style: none;
+    padding: 0;
+}
+.modal-grid .modal ul li{
+    margin-bottom: 10px;
+}
+.modal-grid .modal ul li .duration{
+    width:30px;
+}
+.modal-grid .modal{
+    color:#fff;
+}
+.modal-grid .notification{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -250px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 30px;
+    z-index: 99;
+    color:#fff;
+}
+.modal-grid .notification h3{
+    margin-bottom: 20px;
+}

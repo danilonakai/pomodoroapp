@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pomodoro App</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PomodoroApp</h1>
+        </div>
+    </header>
+    
+    <div id="pomodoro">
+        <h3>You are not working on a specific task yet.</h3>
+        <div class="menu">
+            <span id="menu-pomodoro" class="active">Pomodoro</span>
+            <span id="menu-shortbreak">Short Break</span>
+            <span id="menu-longbreak">Long Break</span>
+        </div>
+        <div class="timer">
+            <span class="timer-hours">00</span>:<span class="timer-minutes">00</span>:<span class="timer-seconds">00</span>
+        </div>
+        <button id="pomodoro-btn" class="start-btn">Start</button>
+    </div>
+
+    <div class="tasks">
+        <h3>Tasks</h3>
+        
+        <div id="open-create-modal">
+            <i class="fas fa-plus-circle"></i> Create Task
+        </div>
+
+        <ul class="task-list"></ul>
+    </div>
+
+    <div class="modal-grid">
+        <div class="modal">
+            <h3 class="modal-title"></h3>
+            <form>
+                <ul>
+                    <li>
+                        <label for="project-name">Project Name:</label>
+                        <input type="text" id="task-name" required>
+                    </li>
+                    <li>
+                        <label class="">Pomodoro Duration:</label>
+                        <span>HH</span>
+                        <input type="number" class="duration" id="pomodoro-duration-hours" value="00" max="99" min="0" required>
+                        <span>MM</span>
+                        <input type="number" class="duration" id="pomodoro-duration-minutes" value="25" max="59" min="0" required>
+                        <span>SS</span>
+                        <input type="number" class="duration" id="pomodoro-duration-seconds" value="00" max="59" min="0" required>
+                    </li>
+                    <li>
+                        <label class="">Short Break Duration:</label>
+                        <span>HH</span>
+                        <input type="number" class="duration" id="shortbreak-duration-hours" value="00" max="99" min="0" required>
+                        <span>MM</span>
+                        <input type="number" class="duration" id="shortbreak-duration-minutes" value="05" max="59" min="0" required>
+                        <span>SS</span>
+                        <input type="number" class="duration" id="shortbreak-duration-seconds" value="00" max="59" min="0" required>
+                    </li>
+                    <li>
+                        <label class="">Long Break Duration:</label>
+                        <span>HH</span>
+                        <input type="number" class="duration" id="longbreak-duration-hours" value="00" max="99" min="0" required>
+                        <span>MM</span>
+                        <input type="number" class="duration" id="longbreak-duration-minutes" value="10" max="59" min="0" required>
+                        <span>SS</span>
+                        <input type="number" class="duration" id="longbreak-duration-seconds" value="00" max="59" min="0" required>
+                    </li>
+                    <li>
+                        <label class="">Cycles:</label>
+                        <input type="number" id="task-cycles" required>
+                    </li>
+                    <li>
+                        <input type="submit" value="Create Task" id="create-task">
+                        <input type="submit" value="Edit Task" id="edit-task">
+                        <button id="delete-task">Delete Task</button>
+                        <button id="generate-report">Generate Report</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="notification">
+            <h3 class="notification-title"></h3>
+            <p class="notification-message">What do you want to do now?</p>
+            <button id="notification-pomodoro-btn">Start pomodoro</button>
+            <button id="notification-shortbreak-btn">Start Short Break</button>
+            <button id="notification-longbreak-btn">Start Long Break</button>
+        </div>
+        
+        <div class="modal-bg"></div>
+    </div>
+    
+    <script src="plugins/jquery/js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
